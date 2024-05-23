@@ -1,0 +1,56 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: #fff;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+main{
+  height: 100vh;
+  width: 100%;
+  background-color: #111;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.box{
+  height: 300px;
+  width: 300px;
+  background-color: crimson;
+  border-radius: 20px;
+}   
+
+.container{
+  padding: 30px;
+  border: 3px solid #fff;
+  border-radius: 20px;
+}
+
+.box2{
+  height: 300px;
+  width: 300px;
+  margin: 20px ;
+  background: linear-gradient(to right bottom, rgb(248, 66, 103), crimson);
+  border-radius: 20px;
+} 
+
+.circle{
+  height: 300px;
+  width: 300px;
+  border-radius: 50%;
+  background: linear-gradient(to right bottom, lightblue, cadetblue);
+}
+
+
+button.active {
+  transform: scale(0.96);
+}
