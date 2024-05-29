@@ -59,7 +59,7 @@ var tl2 = gsap.timeline({
     scrollTrigger:{
         trigger: ".section2",
         scroller: "body",
-        start: "top 50%",
+        start: "top 70%",
         end: "top 0",
         scrub: 2,
     }
@@ -96,7 +96,7 @@ var tl3 = gsap.timeline({
   scrollTrigger:{
       trigger: ".cta-section",
       scroller: "body",
-      start: "top 50%",
+      start: "top 70%",
       end: "top 0",
       scrub: 2,
   }
@@ -127,7 +127,7 @@ var tl4 = gsap.timeline({
   scrollTrigger:{
       trigger: ".case-studies",
       scroller: "body",
-      start: "top 50%",
+      start: "top 70%",
       end: "top 0",
       // scrub: 2,
   }
@@ -146,7 +146,7 @@ var tl5 = gsap.timeline({
   scrollTrigger:{
       trigger: ".footer-section",
       scroller: "body",
-      start: "top 50%",
+      start: "top 80%",
       end: "top 0",
       // scrub: 2,
   }
