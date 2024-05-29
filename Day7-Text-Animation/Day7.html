@@ -1,18 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="style.css">
-    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.css" integrity="sha512-OQDNdI5rpnZ0BRhhJc+btbbtnxaj+LdQFeh0V9/igiEPDiWE2fG+ZsXl0JEH+bjXKPJ3zcXqNyP4/F/NegVdZg==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            color: #fff;
+        }
+
+        html,
+        body {
+            height: 100%;
+            width: 100%;
+        }
+
+        body {
+            height: 100%;
+            width: 100%;
+            background-color: #111;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        h1 {
+            font-size: 100px;
+        }
+
+        h1 span {
+            display: inline-block;
+        }
+    </style>
 </head>
+
 <body>
-    
+
     <h1>sheryians</h1>
 
-    
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="script.js"></script> -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
+        integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        function breakTheText() {
+            var h1 = document.querySelector("h1");
+            var h1Text = h1.textContent;
+
+            var splittedText = h1Text.split("")
+            var halfValue = splittedText.length / 2
+
+            var clutter = ""
+
+            splittedText.forEach(function (elem, idx) {
+                if (idx < halfValue) {
+
+                    clutter += `<span class="a">${elem}</span>`
+                } else {
+                    clutter += `<span class="b">${elem}</span>`
+                }
+            })
+
+            h1.innerHTML = clutter
+        }
+
+        breakTheText()
+
+        gsap.from("h1 .a", {
+            y: 80,
+            duration: 0.6,
+            delay: 0.5,
+            stagger: 0.15,
+            opacity: 0
+        })
+        gsap.from("h1 .b", {
+            y: 80,
+            duration: 0.6,
+            delay: 0.5,
+            stagger: -0.15,
+            opacity: 0
+        })
+    </script>
 </body>
+
 </html>
