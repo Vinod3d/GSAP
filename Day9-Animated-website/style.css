@@ -116,6 +116,7 @@ nav button{
 
 .center-part2 img{
     width: 70%;
+    max-width: 28vw;
     position: absolute;
     right: 0;
 }
